@@ -1,7 +1,12 @@
 import React from "react";
+import Carrossel from "../bannerrotativo/bannerrotativo";
 
 function Home() {
-  return <li><a href="#contato">Home</a></li>;
+  return (
+    <div>
+    <Carrossel />
+    </div>
+  );
 }
 
 export default Home;

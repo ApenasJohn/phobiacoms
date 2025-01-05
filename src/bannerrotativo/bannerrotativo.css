@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'MinhaFonte'; 
+  src: url('/public/fonts/OTF/ClashDisplay-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Estilo geral do carrossel */
+.carrossel-container {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #304d5d; /* Cor de fundo ajustada */
+  overflow: hidden; /* Oculta o excesso de conteúdo */
+  font-family: 'MinhaFonte', sans-serif;
+}
+
+/* Contêiner para os produtos */
+.produtos-display {
+  display: flex;
+  transition: transform 0.3s ease; /* Efeito de transição suave ao mover os produtos */
+}
+
+/* Estilo de cada item de produto */
+.produto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  margin: 0 10px; /* Espaçamento entre os produtos */
+  flex-shrink: 0; /* Impede o encolhimento dos itens */
+}
+
+/* Estilo das imagens dos produtos */
+.produto-item img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo do título (nome do produto) */
+.produto-item h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Estilo da descrição */
+.produto-item p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Botões de navegação (setas) */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+  padding: 0;
+  margin: 0; 
+  border: none;
+}
+
+/* Define o tamanho das imagens das setas */
+.seta img {
+  width: 30px; /* Ajuste o tamanho da seta conforme necessário */
+  height: auto;
+}
+
+
+.seta-esquerda {
+  left: 10px;
+}
+
+.seta-direita {
+  right: 10px;
+}

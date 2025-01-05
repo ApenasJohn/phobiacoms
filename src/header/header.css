@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MinhaFonte'; 
+  src: url('/fonts/OTF/ClashDisplay-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .header {
   display: flex;
   justify-content: center; /* Centraliza a logo e sacola horizontalmente */
@@ -7,6 +13,7 @@
   background-color: #96a234;
   color: white;
   position: relative; /* Para a sacola ser posicionada corretamente */
+  font-family: 'MinhaFonte', sans-serif;
 }
 
 .logo {
