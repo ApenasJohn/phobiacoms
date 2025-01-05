@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  justify-content: center; /* Centraliza a logo e sacola horizontalmente */
+  align-items: center;
+  flex-direction: column; /* Faz os itens do menu ficarem em uma linha abaixo */
+  padding: 20px;
+  background-color: #96a234;
+  color: white;
+  position: relative; /* Para a sacola ser posicionada corretamente */
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Centraliza a logo */
+  width: 100%; /* Garante que a logo ocupe a linha inteira */
+  margin-bottom: 20px; /* Espaço entre a logo e os itens de navegação */
+}
+
+.logo img {
+  width: 100px;
+}
+
+.sacola {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Faz a sacola sair da linha centralizada */
+  right: 20px; /* Ajusta a posição à direita */
+  top: 20px; /* Ajusta a altura para ficar alinhada ao topo */
+}
+
+.sacola img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column; /* Coloca os itens de navegação em coluna */
+  align-items: center; /* Centraliza os itens de navegação */
+  width: 100%;
+}
+
+.nav-links {
+  display: flex; /* Coloca os links na mesma linha */
+  justify-content: center; /* Centraliza os links na linha */
+  width: 100%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: lowercase; /* Coloca as letras em minúsculas */
+  margin: 0 15px; /* Dá espaçamento entre os links */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
