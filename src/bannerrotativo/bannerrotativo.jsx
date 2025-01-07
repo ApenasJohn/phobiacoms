@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Usando React Router para navegação
 import useProdutos from "../produtos/produtos";
 import './bannerrotativo.css'; // Importando o arquivo de estilo
@@ -53,3 +53,42 @@ const Carrossel = () => {
 };
 
 export default Carrossel;
+ */
+
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export default function SimpleSlider() {
+  
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay : true,
+    autoplaySpeed: 3000
+  };
+
+  return (
+    <Slider {...settings}>
+      <div>
+      <img src = "src/assets/images/banner1.png" alt = "banner1" style={{ width: "100%", height: "auto" }} /> 
+      </div>
+      <div>
+        <h3><img src = "src/assets/images/2.png" alt = "banner1" style={{ width: "100%", height: "auto" }} /></h3>
+      </div>
+      <div>
+        <h3><img src = "src/assets/images/3.png" alt = "banner1" style={{ width: "100%", height: "auto" }} /></h3>
+      </div>
+      <div>
+        <h3><img src = "src/assets/images/4.png" alt = "banner1" style={{ width: "100%", height: "auto" }} /></h3>
+      </div>
+      <div>
+        <h3><img src = "src/assets/images/5.png" alt = "banner1" style={{ width: "100%", height: "auto" }} /></h3>
+      </div>
+    </Slider>
+  );
+}

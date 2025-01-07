@@ -15,27 +15,27 @@
 
 /* Container onde os produtos são exibidos */
 .produtos-display-produtos {
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Layout flexível com 200px mínimo por item */
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin : auto;
+    padding: 50px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
 }
 
 /* Estilos dos itens de produto */
 .produto-item-produtos {
-    background-color: #882214;
+    background-color: #882214 ;
     padding: 10px;
-    text-align: center;
+    font-family: 'minhafonte', sans-serif;
+    text-transform: lowercase;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 20%;
 }
 
 /* Estilos das imagens dentro dos produtos */
@@ -47,11 +47,11 @@
 }
 
 /* Estilos para os títulos (h3) e parágrafos (p) dentro dos produtos */
-.produto-item h3,
-.produto-item p {
-    color: black;
-    margin: 10px 0;
-    text-transform: lowercase;
+.produto-item-lançamentos h3,
+.produto-item-lançamentos p {
+  color: black;
+  margin: 10px 0;
+  text-transform: lowercase;
 }
 
 /* Estilo para links dentro dos produtos */
