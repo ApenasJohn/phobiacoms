@@ -1,0 +1,70 @@
+/* Fonte personalizada */
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fonts/OTF/ClashDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'MinhaFonte', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: lowercase; /* Todas as letras minúsculas */
+  }
+  
+  .detalhes-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .detalhes-produto h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .detalhes-conteudo {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 40px;
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  .detalhes-conteudo img {
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .detalhes-informacoes {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre descrição e preço */
+  }
+  
+  .detalhes-informacoes p {
+    font-size: 16px;
+    margin: 0;
+    color: #555;
+  }
+  
+  .detalhes-informacoes p:last-child {
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+  }
+  
+  .adicionar-carrinho img {
+    width: 50px; /* Ajuste o tamanho da imagem */
+    height: 50px; /* Ajuste a altura */
+  }
+  

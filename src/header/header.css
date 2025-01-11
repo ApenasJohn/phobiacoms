@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .header {
   display: flex;
   justify-content: center; /* Centraliza a logo e sacola horizontalmente */
@@ -27,7 +28,7 @@
   width: 100px;
 }
 
-.sacola {
+.carrinho {
   display: flex;
   align-items: center;
   position: absolute; /* Faz a sacola sair da linha centralizada */
@@ -35,9 +36,15 @@
   top: 20px; /* Ajusta a altura para ficar alinhada ao topo */
 }
 
-.sacola img {
-  width: 25px;
-  margin-right: 5px;
+.carrinho img { /* Alteração feita aqui */
+  width: 50px; /* Ajusta a largura para 50px */
+  height: 50px; /* Ajusta a altura para 50px */
+  margin-right: 5px; /* Se necessário, você pode manter esse espaçamento */
+}
+
+.carrinho a {
+  text-decoration: none; /* Remove a decoração do link */
+  color: inherit; /* Herda a cor do texto, que neste caso é branca */
 }
 
 .navigation {
