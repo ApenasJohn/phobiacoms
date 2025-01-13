@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom"; // Importa o Link do React Router
 import React, { useState } from "react";
 import './Contato.css';

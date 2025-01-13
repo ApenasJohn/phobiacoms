@@ -1,31 +1,90 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import './confirmacao.css';
 
-const Confirmacao = () => {
-  const history = useHistory();
+const Confirmacao = ({ fecharPopup, carrinho, valorTotal }) => {
+  const [nome, setNome] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [cep, setCep] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    alert("Pedido confirmado! Em breve entraremos em contato.");
-    history.push("/home"); // Redireciona de volta à loja após confirmação
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Obtendo os IDs dos produtos do carrinho
+    const idsProdutos = carrinho.map(item => item.ID); // Assumindo que cada item tem um campo 'ID'
+
+    try {
+      const response = await axios.post("http://localhost:5000/adicionar-dados", {
+        nome,
+        whatsapp,
+        endereco,
+        cep,
+        idsProdutos,
+        valorTotal,
+        dataEnvio: new Date().toISOString() // Adicionando a data do envio
+      });
+
+      setMensagem(`Pedido confirmado! Número do pedido: ${response.data.numeroPedido}`);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+      setMensagem("Erro ao confirmar o pedido. Tente novamente.");
+    }
   };
 
   return (
-    <div className="confirmacao-container">
-      <h2>Confirmação do Pedido</h2>
-      <form onSubmit={handleFormSubmit}>
-        <label>Nome:</label>
-        <input type="text" name="nome" required />
-        <label>Endereço:</label>
-        <input type="text" name="endereco" required />
-        <label>CEP:</label>
-        <input type="text" name="cep" required />
-        <label>WhatsApp:</label>
-        <input type="text" name="whatsapp" required />
-        <label>Email:</label>
-        <input type="email" name="email" required />
-        <button type="submit">Confirmar Pedido</button>
-      </form>
+    <div className="popup-overlay">
+      <div className="popup-form">
+        <h3>Confirmação de Pedido</h3>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Nome Completo:
+            <input
+              type="text"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Número de WhatsApp:
+            <input
+              type="tel"
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              placeholder="(XX) XXXXX-XXXX"
+              required
+            />
+          </label>
+          <label>
+            Endereço de Entrega:
+            <input
+              type="text"
+              value={endereco}
+              onChange={(e) => setEndereco(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            CEP:
+            <input
+              type="text"
+              value={cep}
+              onChange={(e) => setCep(e.target.value)}
+              placeholder="XXXXX-XXX"
+              required
+            />
+          </label>
+          <div className="popup-buttons">
+            <button type="submit" className="btn-enviar">Confirmar</button>
+            <button type="button" onClick={fecharPopup} className="btn-cancelar">
+              Cancelar
+            </button>
+          </div>
+        </form>
+        {mensagem && <p>{mensagem}</p>}
+      </div>
     </div>
   );
 };
