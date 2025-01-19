@@ -21,6 +21,8 @@ const spreadsheetId = "1wKlEN8hr2gFhb1-xBtBIu-PLjfrae6ejBL--PLzGh3s";
 app.post("/adicionar-dados", async (req, res) => {
   const { nome, whatsapp, endereco, cep, idsProdutos, valorTotal } = req.body;
 
+  console.log("Recebendo dados:", req.body); // Log para depuração
+
   if (!nome || !whatsapp || !endereco || !cep || !idsProdutos || !valorTotal) {
     return res.status(400).json({ error: "Todos os campos são obrigatórios." });
   }
@@ -31,7 +33,8 @@ app.post("/adicionar-dados", async (req, res) => {
   try {
     const sheets = google.sheets({ version: "v4", auth });
 
-    // Adiciona os dados à planilha, incluindo os novos campos.
+    console.log("Enviando para a planilha...");
+
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range: "Pedidos!A:G",
@@ -44,21 +47,22 @@ app.post("/adicionar-dados", async (req, res) => {
             whatsapp,
             endereco,
             cep,
-            idsProdutos.join(", "), // Concatena os IDs dos produtos como string
-            valorTotal,               // Valor total da compra
-            dataEnvio,                // Data de envio do pedido
+            idsProdutos.join(", "),
+            valorTotal,
+            dataEnvio,
           ],
         ],
       },
     });
 
+    console.log("Recebendo dados:", req.body);
+    console.log("Enviando para a planilha...");
+    
+    console.log("Dados enviados com sucesso!");
+
     res.status(200).json({ message: "Dados enviados com sucesso!", numeroPedido });
   } catch (error) {
-    console.error("Erro ao enviar dados.", error);
+    console.error("Erro ao enviar dados para a planilha:", error);
     res.status(500).json({ error: "Erro ao enviar dados." });
   }
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
 });
