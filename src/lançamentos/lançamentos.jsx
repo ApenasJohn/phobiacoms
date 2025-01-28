@@ -17,15 +17,15 @@ const Lancamentos = () => {
     <div className="lancamentos-container">
       <h1>Lançamentos</h1>
       <div className="produtos-display-lançamentos">
-        {produtosVisiveis.map((produto) => (
-          <div className="produto-item-lançamentos" key={produto.ID}>
-            <Link to={`/produto/${produto.ID}`}>
-              <h3>{produto.NOME || "Produto Sem Nome"}</h3>
-              <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
-              <p>{produto.DESCRIÇÃO || "Descrição não disponível"}</p>
-            </Link>
-          </div>
-        ))}
+      {produtosVisiveis.map((produto, index) => (
+  <div className="produto-item-lançamentos" key={index}>
+    <Link to={`/produto/${produto.ID}`}>
+      <h3>{produto.NOME || "Produto Sem Nome"}</h3>
+      <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
+      <p>{produto.DESCRIÇÃO || "Descrição não disponível"}</p>
+    </Link>
+  </div>
+))}
       </div>
       <hr className="linha-lançamentos" />
     </div>
