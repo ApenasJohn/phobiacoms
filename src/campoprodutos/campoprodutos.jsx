@@ -1,10 +1,11 @@
 import React from "react";
-import useProdutos from "../produtos/produtos"; // Hook para pegar os produtos
+import { Link } from "react-router-dom"; 
+import useProdutos from "../produtos/produtos"; 
 import './camposprodutos.css';
 
 const ProdutosList = () => {
-  const produtos = useProdutos("GLOBAL"); // Modifique conforme necessário para pegar todos os produtos
-  const produtosExibidos = produtos.slice(0, 8); // Pega apenas os 8 primeiros produtos
+  const produtos = useProdutos("GLOBAL"); 
+  const produtosExibidos = produtos.slice(0, 8); 
 
   return (
     <div className="produtos-list-container">
@@ -12,7 +13,9 @@ const ProdutosList = () => {
         {produtosExibidos.map((produto) => (
           <div className="produto-item-produtos" key={produto.ID}>
             <h3>{produto.NOME || "Produto Sem Nome"}</h3>
-            <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
+            <Link to={`/produto/${produto.ID}`}>
+              <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
+            </Link>
             <p>{produto.DESCRIÇÃO || "Descrição não disponível"}</p>
           </div>
         ))}

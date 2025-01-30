@@ -12,7 +12,9 @@ const Prints = () => {
         {produtosExibidos.map((produto) => (
           <div className="produto-item-produtos" key={produto.ID}>
             <h3>{produto.NOME || "Produto Sem Nome"}</h3>
-            <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
+            <Link to={`/produto/${produto.ID}`}>
+              <img src={`/images/${produto.IMAGEM}`} alt={produto.NOME} />
+            </Link>
             <p>{produto.DESCRIÇÃO || "Descrição não disponível"}</p>
           </div>
         ))}

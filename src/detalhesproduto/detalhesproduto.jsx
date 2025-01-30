@@ -34,9 +34,6 @@ const DetalhesProduto = () => {
   
     // Emitir evento customizado para notificar sobre a mudança no carrinho
     window.dispatchEvent(new Event('carrinhoAlterado'));
-  
-    // Exibe uma mensagem indicando que o produto foi adicionado
-    alert(`${produto.NOME} adicionado ao carrinho!`);
   };
   
 

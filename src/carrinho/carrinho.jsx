@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Confirmacao from "../confirmação/confirmacao";
+import Confirmacao from "../confirmação/confirmacao"; // Correct import
 import './carrinho.css';
 
 const Carrinho = () => {
@@ -9,7 +9,6 @@ const Carrinho = () => {
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("carrinho")) || [];
-    console.log("Carrinho data:", storedCart); // Log the carrinho data
     setCarrinho(storedCart);
   }, []);
 
