@@ -18,21 +18,18 @@ const DetalhesProduto = () => {
   }
 
   const handleAddToCart = () => {
-    // Recupera os produtos do carrinho do localStorage, ou cria um array vazio se não houver nada
+
     const cart = JSON.parse(localStorage.getItem("carrinho")) || [];
   
-    // Adiciona o produto ao carrinho com todos os dados, incluindo a imagem
     const produtoComImagem = {
       ...produto,
-      IMAGEM: `/images/${produto.IMAGEM}`,  // Garantindo que a imagem tenha o caminho correto
+      IMAGEM: `/images/${produto.IMAGEM}`, 
     };
   
-    cart.push(produtoComImagem);  // Adiciona o produto ao carrinho
+    cart.push(produtoComImagem);
   
-    // Armazena o novo carrinho no localStorage
     localStorage.setItem("carrinho", JSON.stringify(cart));
   
-    // Emitir evento customizado para notificar sobre a mudança no carrinho
     window.dispatchEvent(new Event('carrinhoAlterado'));
   };
   
@@ -48,12 +45,11 @@ const DetalhesProduto = () => {
         </div>
       </div>
       <div className="adicionar-carrinho">
-        {/* Substituindo o botão por uma imagem */}
         <img
           src="/images/add-to-cart.png"
           alt="Adicionar ao Carrinho"
           onClick={handleAddToCart}
-          style={{ cursor: 'pointer' }} // Define o cursor como 'pointer' para indicar que é clicável
+          style={{ cursor: 'pointer' }}
         />
       </div>
     </div>

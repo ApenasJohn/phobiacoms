@@ -6,7 +6,6 @@ import './lançamentos.css';
 const Lancamentos = () => {
   const produtos = useProdutos("NOVIDADES");
 
-  // Filtra os 4 primeiros produtos
   const produtosVisiveis = produtos.slice(0, 4);
 
   if (!produtosVisiveis.length) {

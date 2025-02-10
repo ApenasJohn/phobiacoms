@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './confirmacao.css'; // Import the CSS file
+import './confirmacao.css';
 
 const Confirmacao = ({ fecharPopup, carrinho, valorTotal }) => {
   const [nome, setNome] = useState('');
@@ -12,7 +12,6 @@ const Confirmacao = ({ fecharPopup, carrinho, valorTotal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Obtendo os IDs dos produtos do carrinho
     const idsProdutos = carrinho.map(item => item.ID);
 
     try {

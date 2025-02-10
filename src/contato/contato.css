@@ -1,5 +1,3 @@
-/* CSS global */
-
 @font-face {
     font-family: 'MinhaFonte';
     src: url('assets/fonts/OTF/ClashDisplay-Light.otf') format('opentype');
@@ -13,52 +11,52 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Restante do CSS específico para o formulário de contato */
+  
   .contato-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #eadece; /* O fundo do formulário será uma cor diferente */
+    background-color: #eadece; 
     border-radius: 8px;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
   }
   
   h2 {
     margin-bottom: 20px;
     font-size: 60px;
-    text-transform: lowercase; /* Garante que o título esteja em minúsculas */
+    text-transform: lowercase; 
     font-family: 'MinhaFonte';
   }
 
   .linha-contato {
     border: 0;
-    border-top: 2px solid #333; /* Cor e espessura da linha */
-    width: 75%; /* Define a largura da linha (ajuste conforme necessário) */
-    margin: 10px auto; /* Centraliza a linha e adiciona margem em cima e embaixo */
+    border-top: 2px solid #333; 
+    width: 75%; 
+    margin: 10px auto; 
   }
 
   form {
-    margin-top: 75px; /* Ajuste o valor para o espaçamento desejado entre a linha e o formulário */
+    margin-top: 75px; 
   }
 
   .contato-form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todos os elementos dentro do form */
+    align-items: center; 
   }
   
   .form-group {
     margin-bottom: 15px;
     width: 100%;
-    text-align: left; /* Alinha o conteúdo à esquerda */
+    text-align: left; 
   }
   
   label {
     font-size: 16px;
     margin-bottom: 5px;
     color: #333;
-    text-transform: lowercase; /* Coloca as letras em minúsculas */
-    display: block; /* Faz o label ocupar toda a largura do form-group */
+    text-transform: lowercase; 
+    display: block; 
   }
   
   input, textarea {
@@ -67,16 +65,16 @@ body {
     border: 1px solid #eadece;
     border-radius: 4px;
     width: 100%;
-    margin: 0; /* Remove a margem das caixas */
+    margin: 0;
   }
   
   input {
-    height: 40px; /* Define altura para os campos de texto */
+    height: 40px;
   }
   
   textarea {
-    height: 200px; /* Torna a caixa de mensagem maior */
-    resize: vertical; /* Permite redimensionar a área de texto apenas na vertical */
+    height: 200px; 
+    resize: vertical; 
   }
   
   .submit-button {
@@ -87,7 +85,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%; /* Faz o botão ocupar toda a largura */
+    width: 100%; 
   }
   
   .submit-button:hover {

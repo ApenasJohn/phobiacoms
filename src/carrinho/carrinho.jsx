@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Confirmacao from "../confirmação/confirmacao"; // Correct import
+import Confirmacao from "../confirmação/confirmacao"; 
 import './carrinho.css';
 
 const Carrinho = () => {

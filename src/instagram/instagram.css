@@ -5,29 +5,26 @@
     font-style: normal;
 }
 
-/* Container principal */
 .instagram-container {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #e09e2d;
     width: 100%;
 }
 
-/* Estilos para o lado esquerdo (texto) */
 .texto-esquerdo {
     width: 50%;
     padding-right: 20px;
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-    text-align: justify; /* Justifica o texto */
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
-/* Estilos para o lado direito (janela do Instagram) */
 .janela-instagram {
     width: 40%;
     display: flex;
-    justify-content: center; /* Centraliza a janela do Instagram */
+    justify-content: center;
 }
 
 .janela-instagram iframe {

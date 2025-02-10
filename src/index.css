@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garante que o padding e border não afetem o tamanho total dos elementos */
+  box-sizing: border-box; 
 }
 
 body {

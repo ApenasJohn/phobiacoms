@@ -1,4 +1,3 @@
-/* Container principal dos lançamentos */
 .lancamentos-container {
   background-color: #EADECE;
   padding: 0px;
@@ -11,7 +10,6 @@
   min-height: 20%;
 }
 
-/* Estilos para o título (h1) dentro do container */
 .lancamentos-container h1 {
   text-align: center;
   background-color: transparent;
@@ -21,7 +19,6 @@
   text-transform: lowercase;
 }
 
-/* Container onde os produtos são exibidos */
 .produtos-display-lançamentos {
   display: flex;       
   justify-content: space-between;
@@ -29,7 +26,6 @@
   gap: 20px;
 }
 
-/* Estilos dos itens de produto */
 .produto-item-lançamentos {
   background-color: #882214;
   padding: 10px;
@@ -40,7 +36,6 @@
   height: 100%;
 }
 
-/* Estilos das imagens dentro dos produtos */
 .produto-item-lançamentos img {
   width: 100%;
   height: 200px;
@@ -48,7 +43,6 @@
   border-radius: 0%;
 }
 
-/* Estilos para os títulos (h3) e parágrafos (p) dentro dos produtos */
 .produto-item-lançamentos h3,
 .produto-item-lançamentos p {
   color: black;
@@ -56,13 +50,11 @@
   text-transform: lowercase;
 }
 
-/* Estilo para links dentro dos produtos */
 .produto-item-lançamentos a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Linha de separação entre os lançamentos */
 .linha-lançamentos {
   border: 0;
   border-top: 2px solid #333;
@@ -70,7 +62,6 @@
   margin: 20px auto;
 }
 
-/* Estilos responsivos para telas menores (até 1024px de largura) */
 @media (max-width: 1024px) {
   .produtos-display-lançamentos {
     gap: 10px;
@@ -81,7 +72,6 @@
   }
 }
 
-/* Estilos responsivos para telas muito pequenas (até 600px de largura) */
 @media (max-width: 600px) {
   .produtos-display-lançamentos {
     gap: 5px;

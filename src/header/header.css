@@ -7,21 +7,21 @@
 
 .header {
   display: flex;
-  justify-content: center; /* Centraliza a logo e sacola horizontalmente */
+  justify-content: center; 
   align-items: center;
-  flex-direction: column; /* Faz os itens do menu ficarem em uma linha abaixo */
+  flex-direction: column; 
   padding: 20px;
   background-color: #96a234;
   color: white;
-  position: relative; /* Para a sacola ser posicionada corretamente */
+  position: relative; 
   font-family: 'MinhaFonte', sans-serif;
 }
 
 .logo {
   display: flex;
-  justify-content: center; /* Centraliza a logo */
-  width: 100%; /* Garante que a logo ocupe a linha inteira */
-  margin-bottom: 20px; /* Espaço entre a logo e os itens de navegação */
+  justify-content: center; 
+  width: 100%; 
+  margin-bottom: 20px; 
 }
 
 .logo img {
@@ -31,32 +31,32 @@
 .carrinho {
   display: flex;
   align-items: center;
-  position: absolute; /* Faz a sacola sair da linha centralizada */
-  right: 20px; /* Ajusta a posição à direita */
-  top: 20px; /* Ajusta a altura para ficar alinhada ao topo */
+  position: absolute; 
+  right: 20px; 
+  top: 20px; 
 }
 
-.carrinho img { /* Alteração feita aqui */
-  width: 50px; /* Ajusta a largura para 50px */
-  height: 50px; /* Ajusta a altura para 50px */
-  margin-right: 5px; /* Se necessário, você pode manter esse espaçamento */
+.carrinho img { 
+  width: 50px; 
+  height: 50px; 
+  margin-right: 5px; 
 }
 
 .carrinho a {
-  text-decoration: none; /* Remove a decoração do link */
-  color: inherit; /* Herda a cor do texto, que neste caso é branca */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .navigation {
   display: flex;
-  flex-direction: column; /* Coloca os itens de navegação em coluna */
-  align-items: center; /* Centraliza os itens de navegação */
+  flex-direction: column; 
+  align-items: center;
   width: 100%;
 }
 
 .nav-links {
-  display: flex; /* Coloca os links na mesma linha */
-  justify-content: center; /* Centraliza os links na linha */
+  display: flex; 
+  justify-content: center; 
   width: 100%;
 }
 
@@ -64,8 +64,8 @@
   color: white;
   text-decoration: none;
   font-size: 18px;
-  text-transform: lowercase; /* Coloca as letras em minúsculas */
-  margin: 0 15px; /* Dá espaçamento entre os links */
+  text-transform: lowercase; 
+  margin: 0 15px;
 }
 
 .nav-links a:hover {

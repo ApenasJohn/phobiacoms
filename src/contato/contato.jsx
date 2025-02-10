@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"; // Importa o Link do React Router
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import './Contato.css';
 
@@ -10,16 +10,13 @@ function Contato() {
     mensagem: "",
   });
 
-  // Função para lidar com mudanças nos campos do formulário
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar os dados para um servidor ou API
     console.log("Formulário enviado:", formData);
     alert("Formulário enviado com sucesso!");
   };

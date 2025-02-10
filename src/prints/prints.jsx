@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"; 
 import React from "react";
-import useProdutos from "../produtos/produtos"; // Hook para pegar os produtos
+import useProdutos from "../produtos/produtos"; 
 
 const Prints = () => {
-  const produtos = useProdutos("GLOBAL"); // Modifique conforme necessário para pegar todos os produtos
-  const produtosExibidos = produtos.slice(0, 8); // Pega apenas os 8 primeiros produtos
+  const produtos = useProdutos("GLOBAL"); 
+  const produtosExibidos = produtos.slice(0, 8);
 
   return (
     <div className="produtos-list-container">
